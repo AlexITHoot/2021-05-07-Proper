@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol id="user">
+        <g  transform="translate(109.5 1116.9)">
+            <path  d="M41.286,49.364,39.846,48.7a5.439,5.439,0,0,1-7.528,0l-1.365.664A4.982,4.982,0,0,0,28,53.94v2.4a1.851,1.851,0,0,0,1.845,1.845H42.43a1.851,1.851,0,0,0,1.845-1.845v-2.4A5.077,5.077,0,0,0,41.286,49.364Z" transform="translate(-137 -1155.283)" fill="#fff" stroke="#24002f" stroke-width="1"/>
+            <ellipse  cx="4.096" cy="4.761" rx="4.096" ry="4.761" transform="translate(-104.977 -1116.4)" fill="inherit" stroke="inherit" stroke-width="1"/>
+        </g>
+    </symbol>
+           
+</svg>
