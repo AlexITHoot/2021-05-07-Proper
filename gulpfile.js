@@ -28,6 +28,7 @@ gulp.task('css', function () {
     'node_modules/normalize.css/normalize.css',
     'node_modules/bootstrap/dist/css/bootstrap.css',
     'node_modules/owl.carousel/dist/assets/owl.carousel.css',
+    'node_modules/hamburgers/dist/hamburgers.css'
   ])
     .pipe(concat('_libs.scss'))
     .pipe(gulp.dest('app/scss'))

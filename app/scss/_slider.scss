@@ -1,0 +1,19 @@
+.system__steps {
+  &.owl-carousel {
+    .owl-stage {
+        display: inline-flex;
+        
+      .owl-item {
+          display: flex;
+          .system__step-item{
+            width: 20rem; 
+          }
+        img {
+          width: auto;
+          margin:0 auto;
+        }
+      }
+    }
+  }
+  .owl-dots{display: none;}
+}

@@ -1,0 +1,64 @@
+.card{
+    border-color: $gallery;
+    height: 100%;
+    border-radius: 0.8rem;
+    &-photo{
+        position: relative;
+        overflow: hidden;
+        border-radius:inherit inherit 0 0;
+        img{
+            width: 100%;
+        }
+        .card-bubbles{
+            position: absolute;
+            top:0.5rem;
+            left:0.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            .badge{
+                background-color: $mardi-gras;
+                svg{
+                    margin-right: 1rem;
+                }
+                &.mint{
+                    color:$magic-mint;
+                    svg{
+                        use{
+                            fill:$magic-mint;
+                        }
+                    }
+                }
+                &.gold{
+                    color:$kournikova;
+                    svg{
+                        use{
+                            fill:$kournikova;
+                        }
+                    }                    
+                }
+            }
+        }
+    }
+    &-body{
+        .badge-list{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    &-title{
+        margin-bottom: 2rem;
+        p{
+            font-size: 2rem;
+            font-weight: 700;
+            color:$mardi-gras; 
+            margin: 0;           
+        }
+        .price{
+            font-size: 2rem;
+            font-weight: 700;
+            color:$violet-eggplant;               
+        }
+    }
+}

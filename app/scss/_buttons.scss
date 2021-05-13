@@ -1,0 +1,17 @@
+.btn{
+    font-size: 1.6rem;
+    padding: 0.5rem 1.4rem;
+    outline: none;
+    box-shadow: none;
+    border-radius: 0.4rem;
+    &-primary{
+        background-color: $violet-eggplant;
+        border:transparent;
+        &:hover{
+            background-color: darken($violet-eggplant, 5%);
+        }
+        &:not(:disabled):not(.disabled):active{
+            background-color: darken($violet-eggplant, 7%);
+        }        
+    }
+}

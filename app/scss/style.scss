@@ -2,6 +2,11 @@
 @import './mixins';
 @import './typography';
 @import './vars';
+@import './buttons';
+@import './badges';
+@import './hamburger-menu';
+@import './slider';
+@import './card';
 @import './common';
 @import './header';
 @import './footer';
@@ -13,7 +18,7 @@ html {
 
 body{
     font-family: 'Roboto', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 1.2;
     font-weight: 400;
     box-sizing: border-box;    
@@ -23,4 +28,8 @@ body{
     max-width: 167rem;
     margin: 0 auto;
     width: 100%;
+}
+
+[class*="col-"]{
+    padding: 0 0.8rem;
 }

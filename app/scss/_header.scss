@@ -3,12 +3,73 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    .authentication{
-        svg{
-            use{
-                fill:$mardi-gras;
-                stroke:white;
+    padding: 2.9rem 0;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;        
+    }
+    .menu-block{
+        display: flex;
+        align-items: center;
+    }
+    .menu{
+        margin: 0;
+        padding: 0;  
+        display: flex;
+        align-items: center;      
+        li{
+            list-style: none;
+            &:not(:last-child){
+                margin-right: 2.5rem;
             }
+            a{
+                color:$white;
+            }
+        }
+    }
+    .sell{
+        margin:0 2.5rem;
+    }    
+    .authentication{
+        display: flex;
+        align-items: center;
+        img{
+            margin-right: 0.6rem;
+        }
+        a{
+            color:$white;
+        }
+        span{
+            display: inline-block;
+            color:$white;
+            margin:0 0.4rem;
+        }
+    }
+}
+
+@include respond(m-screen){
+    header{
+        .authentication{
+            font-size: 0;  
+        }
+    }
+}
+
+@include respond(s-screen){
+    header{
+        padding: 1.4rem 0;
+        .container{
+            justify-content: space-between;
+        }
+        .menu-block{
+            display: none;
+        }
+        .authentication{
+            cursor: pointer;
+        }
+        .hamburger{
+            display: block;
         }
     }
 }

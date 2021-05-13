@@ -15,71 +15,572 @@
     <!-- Header  -->
     <header>
         <div class="container">
-            <ul class="menu">
-                <li><a href="#">Properties for sale</a></li>
-                <li><a href="#">New projects</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Q&A</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <a href=""  class="btn">Sell you property</a>
+            <div class="menu-block">
+                <ul class="menu">
+                    <li><a href="#">Properties for sale</a></li>
+                    <li><a href="#">New projects</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Q&A</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <a href="#"  class="btn btn-primary sell">Sell you property</a>                
+            </div>
             <div class="authentication">
-                <svg width="17" height="20" fill="none">
-                    <use xlink:href="./images/icons.svg#user"></use>
-                </svg>
+                <img src="./images/user.svg" alt="user">
                 <a href="#">Login</a>
-                <span class="divider">/</span>
+                <span>/</span>
                 <a href="#">Register</a>
             </div>
+            <button class="hamburger hamburger--elastic" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+            </button>
         </div>
     </header>
     <!-- Main screen -->
     <section class="main-screen">
         <div class="container">
-
+            <div class="logo">
+                buy&sell like a pro<br>
+                <span>Proper.homes</span>
+            </div>
+            <p>Proper’s revolution brings the seller a simple and fair method of<br> 
+            advertising and sales, accompanied by dedicated experts and a<br> 
+            process of selling and buying properties - easy, efficient and simple for<br>
+            both the seller and the buyer and saves time, resources and money.</p>
+            <div class="search">
+                <input type="text" placeholder="Type a city name with properties for sale">
+                <button>
+                    <svg width="24" height="24" fill="none">
+                        <use xlink:href="./images/icons.svg#search"></use>
+                    </svg>                    
+                </button>
+            </div>
+            <div class="advantages">
+                <div class="advantages__item">
+                    <div class="advantages__icon">
+                        <svg width="42" height="27" fill="none">
+                            <use xlink:href="./images/icons.svg#handshake"></use>
+                        </svg>
+                    </div>
+                    <span>Fixed brokerage<br> fee NIS 9900 only</span>
+                </div>
+                <div class="advantages__item">
+                    <div class="advantages__icon">
+                        <svg width="32" height="32" fill="none">
+                            <use xlink:href="./images/icons.svg#approve"></use>
+                        </svg>                        
+                    </div>
+                    <span>Each property is<br> checked by us</span>
+                </div>
+                <div class="advantages__item">
+                    <div class="advantages__icon">
+                        <svg width="33" height="29" fill="none">
+                            <use xlink:href="./images/icons.svg#confirmation"></use>
+                        </svg>                        
+                    </div>
+                    <span>Confirmation<br> within 24 hours</span>
+                </div>
+                <div class="advantages__item">
+                    <div class="advantages__icon">
+                        <svg width="32" height="30" fill="none">
+                            <use xlink:href="./images/icons.svg#pending-offers"></use>
+                        </svg>                        
+                    </div>
+                    <span>Pending offers<br> during negotiations</span>
+                </div>
+            </div>
         </div>
     </section>
     <!-- System  -->
     <section class="system">
         <div class="container">
+            <div class="title">
+                <h2><span>PRoPER’s</span> System</h2>
+            </div>
             <div class="row">
-                <div class="col-4">
-                    <h3>PRoPER’s System</h3>
+                <div class="col-12 col-xl-4">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru</p>
                 </div>
-                <div class="col-8">
-                    <div class="system__steps">
+                <div class="col-12 col-xl-8">
+                    <div class="system__steps owl-carousel owl-theme">
                         <div class="system__step-item">
-                            <p>The seller of the property advertises the property in Proper</p>
+                            <p>The seller of<br> the property<br> advertises</p>
                             <div class="icon">
-
+                                <img src="./images/system-step-icon-1.svg" alt="icon">
                             </div>
                         </div>
+                        <div class="system__arrow">
+                            <img src="./images/system-step-arrow.svg" alt="arrow">
+                        </div>
                         <div class="system__step-item">
-                            <p>A proper representative arrives at the property, inspects, documents and photographs it</p>
+                            <p>A proper representative<br> arrives at the property,<br> inspects, documents and</p>
                             <div class="icon">
-
+                                <img src="./images/system-step-icon-2.svg" alt="icon">
                             </div>
                         </div>
-                        <div class="system__step-item">
-                            <p>The property is advertised and begins to receive only relevant offers</p>
-                            <div class="icon"></div>
+                        <div class="system__arrow">
+                            <img src="./images/system-step-arrow.svg" alt="arrow">
                         </div>
                         <div class="system__step-item">
-                            <p>The seller approves the preferred offer and contacts the bidder</p>
-                            <div class="icon"></div>
+                            <p>The property is<br> advertised and begins<br> to receive only</p>
+                            <div class="icon">
+                                <img src="./images/system-step-icon-3.svg" alt="icon">
+                            </div>
+                        </div>
+                        <div class="system__arrow">
+                            <img src="./images/system-step-arrow.svg" alt="arrow">
+                        </div>
+                        <div class="system__step-item">
+                            <p>The seller approves the<br> preferred offer and<br> contacts the bidder</p>
+                            <div class="icon">
+                                <img src="./images/system-step-icon-4.svg" alt="icon">
+                            </div>
                         </div>
                     </div>
+                    <hr class="divider yellow">
                 </div>
             </div>
         </div>
     </section>
-    
+    <!-- New Properties -->
+    <section class="new-properties">
+        <div class="container">
+            <div class="title d-flex">
+                <h2><span>PRoPER’s</span> New Properties</h2>
+               <a href="#" class="more d-none d-md-block">
+                    <svg width="16" height="16" fill="none">
+                        <use xlink:href="./images/icons.svg#arrow"></use>
+                    </svg>                    
+                    More properties</a>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-16">
+                    <div class="card">
+                        <div class="card-photo">
+                            <div class="card-bubbles">
+                                <div class="badge gold">
+                                    <svg width="18" height="16" fill="none">
+                                        <use xlink:href="./images/icons.svg#popular-property"></use>
+                                    </svg> 
+                                    <span>Popular property</span>
+                                </div>                                
+                            </div>
+                            <img src="./images/properties1.jpg" alt="properties">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <p>Mizrahi Moshe 12, Rehovot</p>
+                                <span class="price">‏1,180,000 ₪</span>
+                            </div>
+                            <div class="badge-list">
+                                <div class="badge">
+                                    <img src="./images/dors.svg" alt="">
+                                    <span>9 rooms</span>
+                                </div>
+                                <div class="badge">
+                                    <img src="./images/square.svg" alt="">
+                                    <span>280 sqm</span>
+                                </div> 
+                                <div class="badge">
+                                    <img src="./images/duplex.svg" alt="">
+                                    <span>Duplex</span>
+                                </div>                                                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-16">
+                    <div class="card">
+                        <div class="card-photo">
+                            <div class="card-bubbles">
+                                <div class="badge mint">
+                                    <svg width="14" height="16" fill="none">
+                                        <use xlink:href="./images/icons.svg#price-drop"></use>
+                                    </svg>   
+                                    <span>Price drop</span>
+                                </div>
+                                <div class="badge gold">
+                                    <svg width="18" height="16" fill="none">
+                                        <use xlink:href="./images/icons.svg#popular-property"></use>
+                                    </svg>   
+                                    <span>Popular property</span>
+                                </div>                                
+                            </div>
+                            <img src="./images/properties2.jpg" alt="properties">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <p>Mizrahi Moshe 12, Rehovot</p>
+                                <span class="price">‏1,180,000 ₪</span>
+                            </div>
+                            <div class="badge-list">
+                                <div class="badge">
+                                    <img src="./images/dors.svg" alt="">
+                                    <span>9 rooms</span>
+                                </div>
+                                <div class="badge">
+                                    <img src="./images/square.svg" alt="">
+                                    <span>280 sqm</span>
+                                </div> 
+                                <div class="badge">
+                                    <img src="./images/duplex.svg" alt="">
+                                    <span>Duplex</span>
+                                </div>
+                                <div class="badge">
+                                    <img src="./images/exclusive.svg" alt="">
+                                    <span>Exclusive</span>
+                                </div>                                                                                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-16">
+                    <div class="card">
+                        <div class="card-photo">
+                            <div class="card-bubbles">
+                                <div class="badge gold">
+                                    <svg width="18" height="16" fill="none">
+                                        <use xlink:href="./images/icons.svg#popular-property"></use>
+                                    </svg> 
+                                    <span>Popular property</span>
+                                </div>                                
+                            </div>
+                            <img src="./images/properties1.jpg" alt="properties">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <p>Mizrahi Moshe 12, Rehovot</p>
+                                <span class="price">‏1,180,000 ₪</span>
+                            </div>
+                            <div class="badge-list">
+                                <div class="badge">
+                                    <img src="./images/dors.svg" alt="">
+                                    <span>9 rooms</span>
+                                </div>
+                                <div class="badge">
+                                    <img src="./images/square.svg" alt="">
+                                    <span>280 sqm</span>
+                                </div> 
+                                <div class="badge">
+                                    <img src="./images/duplex.svg" alt="">
+                                    <span>Duplex</span>
+                                </div>                                                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-16">
+                    <div class="card">
+                        <div class="card-photo">
+                            <div class="card-bubbles">
+                                <div class="badge mint">
+                                    <svg width="14" height="16" fill="none">
+                                        <use xlink:href="./images/icons.svg#price-drop"></use>
+                                    </svg>   
+                                    <span>Price drop</span>
+                                </div>
+                                <div class="badge gold">
+                                    <svg width="18" height="16" fill="none">
+                                        <use xlink:href="./images/icons.svg#popular-property"></use>
+                                    </svg>   
+                                    <span>Popular property</span>
+                                </div>                                
+                            </div>
+                            <img src="./images/properties2.jpg" alt="properties">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <p>Mizrahi Moshe 12, Rehovot</p>
+                                <span class="price">‏1,180,000 ₪</span>
+                            </div>
+                            <div class="badge-list">
+                                <div class="badge">
+                                    <img src="./images/dors.svg" alt="">
+                                    <span>9 rooms</span>
+                                </div>
+                                <div class="badge">
+                                    <img src="./images/square.svg" alt="">
+                                    <span>280 sqm</span>
+                                </div> 
+                                <div class="badge">
+                                    <img src="./images/duplex.svg" alt="">
+                                    <span>Duplex</span>
+                                </div>
+                                <div class="badge">
+                                    <img src="./images/exclusive.svg" alt="">
+                                    <span>Exclusive</span>
+                                </div>                                                                                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-16">
+                    <div class="card">
+                        <div class="card-photo">
+                            <div class="card-bubbles">
+                                <div class="badge gold">
+                                    <svg width="18" height="16" fill="none">
+                                        <use xlink:href="./images/icons.svg#popular-property"></use>
+                                    </svg> 
+                                    <span>Popular property</span>
+                                </div>                                
+                            </div>
+                            <img src="./images/properties1.jpg" alt="properties">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <p>Mizrahi Moshe 12, Rehovot</p>
+                                <span class="price">‏1,180,000 ₪</span>
+                            </div>
+                            <div class="badge-list">
+                                <div class="badge">
+                                    <img src="./images/dors.svg" alt="">
+                                    <span>9 rooms</span>
+                                </div>
+                                <div class="badge">
+                                    <img src="./images/square.svg" alt="">
+                                    <span>280 sqm</span>
+                                </div> 
+                                <div class="badge">
+                                    <img src="./images/duplex.svg" alt="">
+                                    <span>Duplex</span>
+                                </div>                                                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-16">
+                    <div class="card">
+                        <div class="card-photo">
+                            <div class="card-bubbles">
+                                <div class="badge mint">
+                                    <svg width="14" height="16" fill="none">
+                                        <use xlink:href="./images/icons.svg#price-drop"></use>
+                                    </svg>   
+                                    <span>Price drop</span>
+                                </div>
+                                <div class="badge gold">
+                                    <svg width="18" height="16" fill="none">
+                                        <use xlink:href="./images/icons.svg#popular-property"></use>
+                                    </svg>   
+                                    <span>Popular property</span>
+                                </div>                                
+                            </div>
+                            <img src="./images/properties2.jpg" alt="properties">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <p>Mizrahi Moshe 12, Rehovot</p>
+                                <span class="price">‏1,180,000 ₪</span>
+                            </div>
+                            <div class="badge-list">
+                                <div class="badge">
+                                    <img src="./images/dors.svg" alt="">
+                                    <span>9 rooms</span>
+                                </div>
+                                <div class="badge">
+                                    <img src="./images/square.svg" alt="">
+                                    <span>280 sqm</span>
+                                </div> 
+                                <div class="badge">
+                                    <img src="./images/duplex.svg" alt="">
+                                    <span>Duplex</span>
+                                </div>
+                                <div class="badge">
+                                    <img src="./images/exclusive.svg" alt="">
+                                    <span>Exclusive</span>
+                                </div>                                                                                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-16">
+                    <div class="card">
+                        <div class="card-photo">
+                            <div class="card-bubbles">
+                                <div class="badge gold">
+                                    <svg width="18" height="16" fill="none">
+                                        <use xlink:href="./images/icons.svg#popular-property"></use>
+                                    </svg> 
+                                    <span>Popular property</span>
+                                </div>                                
+                            </div>
+                            <img src="./images/properties1.jpg" alt="properties">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <p>Mizrahi Moshe 12, Rehovot</p>
+                                <span class="price">‏1,180,000 ₪</span>
+                            </div>
+                            <div class="badge-list">
+                                <div class="badge">
+                                    <img src="./images/dors.svg" alt="">
+                                    <span>9 rooms</span>
+                                </div>
+                                <div class="badge">
+                                    <img src="./images/square.svg" alt="">
+                                    <span>280 sqm</span>
+                                </div> 
+                                <div class="badge">
+                                    <img src="./images/duplex.svg" alt="">
+                                    <span>Duplex</span>
+                                </div>                                                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-16">
+                    <div class="card">
+                        <div class="card-photo">
+                            <div class="card-bubbles">
+                                <div class="badge mint">
+                                    <svg width="14" height="16" fill="none">
+                                        <use xlink:href="./images/icons.svg#price-drop"></use>
+                                    </svg>   
+                                    <span>Price drop</span>
+                                </div>
+                                <div class="badge gold">
+                                    <svg width="18" height="16" fill="none">
+                                        <use xlink:href="./images/icons.svg#popular-property"></use>
+                                    </svg>   
+                                    <span>Popular property</span>
+                                </div>                                
+                            </div>
+                            <img src="./images/properties2.jpg" alt="properties">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <p>Mizrahi Moshe 12, Rehovot</p>
+                                <span class="price">‏1,180,000 ₪</span>
+                            </div>
+                            <div class="badge-list">
+                                <div class="badge">
+                                    <img src="./images/dors.svg" alt="">
+                                    <span>9 rooms</span>
+                                </div>
+                                <div class="badge">
+                                    <img src="./images/square.svg" alt="">
+                                    <span>280 sqm</span>
+                                </div> 
+                                <div class="badge">
+                                    <img src="./images/duplex.svg" alt="">
+                                    <span>Duplex</span>
+                                </div>
+                                <div class="badge">
+                                    <img src="./images/exclusive.svg" alt="">
+                                    <span>Exclusive</span>
+                                </div>                                                                                                
+                            </div>
+                        </div>
+                    </div>
+                </div>                                                
+            </div>
+            <a href="#" class="more d-block d-md-none">
+                <svg width="16" height="16" fill="none">
+                    <use xlink:href="./images/icons.svg#arrow"></use>
+                </svg>                    
+                More properties</a>
+            <hr class="divider yellow">
+        </div>
+    </section>  
+    <!-- New Projects -->
+    <section class="new-projects">
+        <div class="container">
+            <div class="title d-flex">
+                <h2><span>PRoPER’s</span> New Projects</h2>
+               <a href="#" class="more d-none d-md-block">
+                    <svg width="16" height="16" fill="none">
+                        <use xlink:href="./images/icons.svg#arrow"></use>
+                    </svg>                    
+                    More properties</a>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-tiles">
 
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <p><strong>Ramat HaKovesh / Caesarea Towers</strong></p>
+                                <p>The complex includes 4 luxury towers that rise to a height of 33 floors with 684 units. 
+                                In the harmonious complex, everything connects - quality housing with a blue sea view, 
+                                leisure areas, a central location, educational institutions and a synagogue.</p>
+                            </div>
+                            <div class="badge-list">
+                                <div class="badge">
+                                    End date: <span>April 2022</span>
+                                </div>
+                                <div class="badge">
+                                    Start date: <span>April 2021</span>
+                                </div> 
+                                <div class="badge">
+                                    Owener: <span>Africa Israel</span>
+                                </div>
+                                <div class="badge">
+                                    City: <span>Netanya</span>
+                                </div>
+                                <div class="badge">
+                                    Property types: <span>6</span>
+                                </div>
+                                <div class="badge">
+                                    Units: <span>48</span>
+                                </div>
+                                <div class="badge">
+                                    Buildings: <span>4</span>
+                                </div>                                                                                                                                                                                                
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-tiles">
+
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <p><strong>Savyon City Towers</strong></p>
+                                <p>The new north of Netanya is being renewed with the prestigious “Savyon City Towers” project from Africa Israel Residence. 
+                                This is your opportunity to live in the beloved and familiar environment: Rabbi Kook St., corner of Andrews, 
+                                near Independence Square, the promenade and the beach, the </p>
+                            </div>
+                            <div class="badge-list">
+                                <div class="badge">
+                                    End date: <span>April 2022</span>
+                                </div>
+                                <div class="badge">
+                                    Start date: <span>April 2021</span>
+                                </div> 
+                                <div class="badge">
+                                    Owener: <span>Africa Israel</span>
+                                </div>
+                                <div class="badge">
+                                    City: <span>Netanya</span>
+                                </div>
+                                <div class="badge">
+                                    Property types: <span>6</span>
+                                </div>
+                                <div class="badge">
+                                    Units: <span>48</span>
+                                </div>
+                                <div class="badge">
+                                    Buildings: <span>4</span>
+                                </div>                                                                                                                                                                                                
+                            </div>                            
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="js/libs.min.js"></script>
+      <script src="js/main.js"></script>
   </body>
 </html>

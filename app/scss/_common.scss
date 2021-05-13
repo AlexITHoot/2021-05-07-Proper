@@ -1,5 +1,291 @@
 .main-screen{
-    min-height: 108rem;
+    min-height: 100vh;
+    padding: 23rem 0 10rem;
     background: url('../images/main_bg.jpg') no-repeat center bottom;
     background-size: cover;
+    .logo{
+        display: inline-block;
+        color:$white;
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+        span{
+            font-size: 5rem;
+        }
+    }
+    p{
+        font-size: 2rem;
+        line-height: 1.5;
+        color:$white;
+    }
+    .search{
+        display: inline-block;
+        position: relative;
+        margin-top: 3.5rem;
+        margin-bottom: 3.2rem;
+        width: 100%;
+        max-width: 67.4rem;
+        input{
+            width: 100%;
+            height: 8rem;
+            font-size: 2rem;
+            font-weight: 400;
+            color:$mardi-gras;
+            border:1px solid $dove-gray;
+            border-radius: 4rem;
+            outline: none;
+            padding: 0 10rem 0 4.3rem;
+            &::-webkit-input-placeholder {
+                color: $mardi-gras;
+            }
+            
+            &::-moz-placeholder {
+                color: $mardi-gras;
+            }
+            
+            /* Firefox 19+ */
+            &:-moz-placeholder {
+                color: $mardi-gras;
+            }
+            
+              /* Firefox 18- */
+            &:-ms-input-placeholder {
+                color: $mardi-gras;
+            }   
+        }
+        button{
+            border: none;
+            background: none;
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            right:5rem;
+            padding: 0;
+            outline: none;
+            svg{
+                use{
+                    fill:$violet-eggplant;
+                }
+            }
+        }
+    }
+    .advantages{
+        display: flex;
+        align-items: center;
+        &__item{
+            display: flex;
+            align-items: center;
+            &:not(:last-child){
+                margin-right: 2.5rem;
+            }
+            svg{
+                flex-shrink: 0;
+                margin-right: 1rem;
+                use{
+                    fill:$white;
+                }
+            }
+            span{
+                font-size: 1.4rem;
+                line-height: 1.8;
+                font-weight: 400;
+                color:$white;
+            }            
+        }
+    }
+}
+
+.system{
+    padding: 9.5rem 0 8.5rem;
+    .title{
+        h2{
+            font-size: 4rem;
+            font-weight: 400;
+            color:$mardi-gras;
+            span{
+                display: inline-block;
+                color:$violet-eggplant
+            }                        
+        }
+    }
+    p{
+        color:$mardi-gras;
+    }
+    &__steps{
+        display: flex;
+        padding-bottom: 7rem;
+        justify-content: space-between;
+    }
+    &__step-item{
+        padding: 0 1.5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        p{
+            font-size: 2rem;
+            line-height: 1.5;
+            font-weight: 500;
+            color:$mardi-gras;
+            margin-bottom: 1.5rem;
+            br{
+                display: none;
+            }
+        }
+        .icon{
+            margin-top: auto;
+        }
+    }
+    &__arrow{
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 2rem;
+        padding: 0 1.5rem;
+    }    
+}
+
+.new-properties{
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+        h2{
+            font-size: 4rem;
+            font-weight: 400;
+            color:$mardi-gras;
+            span{
+                display: inline-block;
+                color:$violet-eggplant
+            }                        
+        }
+    }
+    .more{
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 300;
+        color:$mardi-gras;
+        text-decoration: underline;
+        svg{
+            margin-right: 1rem;
+            use{
+                fill:$mardi-gras;
+            }
+        }
+        &:hover{
+            text-decoration: none;
+        }   
+    }
+    hr{
+        max-width: 56rem;
+        margin: 9rem auto 0;
+    }
+}
+
+.divider{
+    height: 0.7rem;
+    margin: 0;
+    border: none;
+    &.yellow{
+        background: $kournikova;
+    }
+    &.violet{
+        background: $violet-eggplant;
+    }
+}
+
+.mb-16{
+    margin-bottom: 1.6rem;
+}
+
+@include respond(xl-screen){
+    .system{
+        &__step-item{
+          p{
+              font-size: 1.8rem;
+          }  
+        } 
+    }
+}
+
+@include respond(lg-screen){
+    .system{
+        &__steps{
+            margin-top: 3rem;
+        }
+        &__step-item{
+          p{
+              font-size: 1.6rem;
+          }  
+        } 
+    }    
+}
+
+@include respond(s-screen){
+    .main-screen{
+        text-align: center;
+        padding: 10rem 0;
+        .logo{
+            text-align: left;
+            font-size: 1.6rem;
+            span{
+                font-size: 3.6rem;
+            }
+        }
+        p{
+            font-size: 1.6rem;
+            br{
+                display: none;
+            }
+        }
+        .search{
+            max-width: 45rem;
+            input{
+                font-size: 1.6rem;
+                padding-left: 2rem;
+                height: 5rem;
+            }
+            button{
+                right: 2rem;
+            }
+        }
+        .advantages{
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            &__item{
+                span{
+                    br{
+                        display: none;
+                    }
+                }
+                &:not(:last-child){
+                    margin-bottom: 1rem;
+                }
+            }
+            &__icon{
+                width: 5rem;
+            }
+        }
+    }
+    .new-properties{
+        .more{
+            margin:0 auto;
+        }
+    }
+}
+
+@include respond(es-screen){
+    .main-screen{
+        padding-top: 5.7rem;
+        .search{
+            input{
+                height: 4rem;
+            }
+        }
+    }
+    .system{
+        &__steps{
+            padding-bottom: 2rem;
+        }
+    }
 }
