@@ -1,0 +1,195 @@
+.winWith {
+	position: relative;
+	height: 100%;
+
+	&:before {
+		position: absolute;
+		content: '';
+		width: 50%;
+		height: 100%;
+		background: url(../../app/images/everyone.jpg) no-repeat center;
+		background-size: cover;
+		top: 0;
+		right: 0;
+	}
+
+	.container {
+		.row {
+			.mr-l-15 {
+				margin-left: -1.5rem;
+			}
+
+			.everyoneWin__content {
+				margin-right: 15rem;
+
+				hr {
+					width: 77%;
+					height: 0.8rem;
+					background-color: #B611A9;
+					margin-top: 0;
+					margin-bottom: 10.3rem;
+					margin-left: -1.3rem;
+				}
+
+				h2 {
+					font-weight: 400;
+					margin-bottom: 6rem;
+					margin-left: 0.7rem;
+
+					span {
+						color: #B611A9;
+					}
+				}
+
+				h3 {
+					line-height: 110%;
+					margin-bottom: 0.9rem;
+				}
+
+				p {
+					font-size: 1.6rem;
+					line-height: 156%;
+				}
+
+				.svg-container {
+					svg {
+						width: 12.5rem;
+						height: 10rem;
+					}
+				}
+
+				.mr-left {
+					margin-left: 8.2rem;
+				}
+
+				.mr-btm {
+					margin-bottom: 8.9rem;
+				}
+
+				.sellers {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+
+				.buyers {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+		}
+	}
+}
+
+@include respond(xl-screen) {
+	.winWith {
+		.container {
+			.col-6 {
+				.everyoneWin__content {
+					margin-left: 0;
+					margin-right: 0;
+
+					hr {
+						width: 100%;
+						margin-left: 0;
+						margin-bottom: 5rem;
+					}
+
+					h2 {
+						margin-bottom: 4rem;
+					}
+
+					.mr-left {
+						margin-left: 3rem;
+					}
+
+					.mr-btm {
+						margin-bottom: 4rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include respond(m-screen) {
+	.winWith {
+		.container {
+			.col-6 {
+				.everyoneWin__content {
+					.mr-left {
+						margin-left: 1rem;
+					}
+
+					.svg-container {
+						svg {
+							width: 10rem;
+							height: 8rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include respond(s-screen) {
+	.winWith {
+		&:before {
+			display: block;
+			position: relative;
+			content: '';
+			width: 100%;
+			margin-top: 5px;
+			z-index: 1;
+			height: 25.7rem;
+			background: url(../../app/images/everyone.jpg) no-repeat center;
+			background-size: cover;
+		}
+
+		.container {
+			.row {
+				justify-content: center;
+
+				.col-6 {
+					flex: 0 0 100%;
+					max-width: 100%;
+
+
+					.everyoneWin__content {
+						hr {
+							transform: translateY(-26.2rem);
+							height: 0.5rem;
+							width: 100%;
+							margin-bottom: 2rem;
+						}
+
+						h2 {
+							font-size: 4rem;
+							text-align: center;
+						}
+
+						p {
+							font-size: 1.6rem;
+							line-height: 156%;
+						}
+
+						h3 {
+							font-size: 2rem;
+						}
+
+						.fld-colum {
+							flex-direction: column;
+							align-items: baseline;
+
+							.svg-container {
+								margin-bottom: 2rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
