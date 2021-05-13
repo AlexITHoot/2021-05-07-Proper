@@ -1,0 +1,48 @@
+.sell {
+	.container {
+		.col-xl-6 {
+			.item {
+				display: flex;
+				align-items: center;
+				padding: 0.5rem 0.6rem;
+				margin: 0.5rem 0.5rem;
+				background-color: #F1F1F1;
+				border-radius: 0.4rem;
+
+				p {
+
+					margin-left: 0.5rem;
+					margin-bottom: 0;
+				}
+
+				&.yelow {
+					background-color: #24002F;
+					color: #FEDF77;
+				}
+
+				&.green {
+					background-color: #24002F;
+					color: #99EAC1;
+				}
+			}
+
+			.about {
+				p {
+					margin-top: 1rem;
+					margin-bottom: 0;
+					line-height: 156%;
+					font-weight: 700;
+
+					span {
+						margin-left: 0.5rem;
+						font-weight: 400;
+					}
+				}
+			}
+
+			.row {
+				margin-left: 0;
+			}
+		}
+	}
+}
