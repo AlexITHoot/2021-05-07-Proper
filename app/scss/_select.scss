@@ -1,0 +1,38 @@
+.ss-main{
+    margin-left: 0.5rem;
+    .ss-single-selected{
+        border:none;
+        .placeholder{
+            color:$violet-eggplant;
+        }
+        .ss-arrow{
+            margin-right: 0;  
+            .arrow-down{
+                border-width: 0 1px 1px 0;
+                border-color:$violet-eggplant;
+            }
+            .arrow-up{
+                border-width: 0 1px 1px 0;
+                border-color:$violet-eggplant;
+            }            
+        }
+    }
+    .ss-content{
+        right:0;
+        width: fit-content;
+        min-width: 100%;
+        border-radius:0.3rem;
+        padding: 0.5rem;
+        border:none;
+        @include box_shadow(1);
+        .ss-option{
+            white-space: nowrap;
+            font-size: 1.4rem;
+            color:$violet-eggplant;
+            &:hover{
+                color:$white;
+                background: $violet-eggplant;
+            }
+        }
+    }
+}

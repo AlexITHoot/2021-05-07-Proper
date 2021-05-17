@@ -1,0 +1,41 @@
+.map{
+    position: fixed;
+    width: calc(50% - 16px);
+    height: 100%;
+    top:0;
+    right:0;
+}
+
+.filter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.filter-btn{
+    color:$violet-eggplant;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    svg{
+        margin-right: 0.5rem;
+        use{
+            fill:$violet-eggplant;
+        }
+    }
+    &:hover{
+        color:$violet-eggplant;
+    }
+}
+
+.sort{
+    color:$mardi-gras;
+    display: flex;
+    align-items: center;
+    span{
+       flex-shrink: 0;
+       font-size: 1.4rem;
+       color:$mardi-gras; 
+    }
+}

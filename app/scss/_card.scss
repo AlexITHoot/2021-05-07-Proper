@@ -121,3 +121,15 @@
         }        
     }
 }
+
+@include respond(es-screen){
+    .card{
+        &-tiles{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            .tiles-item:not(:first-child){
+                display: none;
+            }
+        }
+    }
+}

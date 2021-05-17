@@ -4,47 +4,96 @@ header{
     left: 0;
     width: 100%;
     padding: 2.9rem 0;
+    z-index: 2;
     .container{
         display: flex;
         align-items: center;
         justify-content: flex-end;        
     }
-    .menu-block{
+    .container-fluid{
         display: flex;
         align-items: center;
-    }
-    .menu{
-        margin: 0;
-        padding: 0;  
-        display: flex;
-        align-items: center;      
-        li{
-            list-style: none;
-            &:not(:last-child){
-                margin-right: 2.5rem;
+        justify-content: flex-end;        
+    }        
+    &.transparent{
+        .menu-block{
+            display: flex;
+            align-items: center;
+        }
+        .menu{
+            margin: 0;
+            padding: 0;  
+            display: flex;
+            align-items: center;      
+            li{
+                list-style: none;
+                &:not(:last-child){
+                    margin-right: 2.5rem;
+                }
+                a{
+                    color:$white;
+                }
+            }
+        }
+        .sell{
+            margin:0 2.5rem;
+        }    
+        .authentication{
+            display: flex;
+            align-items: center;
+            img{
+                margin-right: 0.6rem;
             }
             a{
                 color:$white;
             }
-        }
+            span{
+                display: inline-block;
+                color:$white;
+                margin:0 0.4rem;
+            }
+        }        
     }
-    .sell{
-        margin:0 2.5rem;
-    }    
-    .authentication{
-        display: flex;
-        align-items: center;
-        img{
-            margin-right: 0.6rem;
+    &.white{
+        background: $white;
+        @include box_shadow(1);
+        .menu-block{
+            display: flex;
+            align-items: center;
         }
-        a{
-            color:$white;
+        .menu{
+            margin: 0;
+            padding: 0;  
+            display: flex;
+            align-items: center;      
+            li{
+                list-style: none;
+                &:not(:last-child){
+                    margin-right: 2.5rem;
+                }
+                a{
+                    color:$mardi-gras;
+                }
+            }
         }
-        span{
-            display: inline-block;
-            color:$white;
-            margin:0 0.4rem;
-        }
+        .sell{
+            margin:0 2.5rem;
+        }    
+        .authentication{
+            display: flex;
+            align-items: center;
+            img{
+                margin-right: 0.6rem;
+            }
+            a{
+                color:$mardi-gras;
+            }
+            span{
+                display: inline-block;
+                color:$mardi-gras;
+                margin:0 0.4rem;
+            }
+        }          
     }
 }
 
