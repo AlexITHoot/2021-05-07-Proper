@@ -611,3 +611,180 @@
 		}
 	}
 }
+
+
+.cards {
+	.card-block {
+		.cards-title {
+			color: $mardi-gras;
+			font-weight: medium;
+			margin-bottom: 1.5rem;
+		}
+
+		.card-wrapper {
+			justify-content: space-between;
+			margin: 0;
+			min-height: 49.5rem;
+			padding-bottom: 6rem;
+
+			.swiper-wrapper {
+				&.stop {
+					transform: translate3d(0px, 0px, 0px) !important;
+				}
+			}
+
+			.card {
+				color: $mardi-gras;
+				position: relative;
+				height: 49.5rem;
+				border-radius: 0.8rem;
+
+				.card-image {
+					min-height: 25rem;
+
+					img {
+						width: 100%;
+						height: 100%;
+						overflow: hidden;
+					}
+				}
+
+				.card-info {
+					padding: 1.7rem 2.8rem 2rem 2.1rem;
+
+					span {
+						font-size: 2rem;
+						font-weight: 700;
+						line-height: 120%;
+						color: $violet-eggplant;
+					}
+
+					.hide {
+						display: none;
+					}
+
+					.card-desc {
+						display: flex;
+						margin-top: 2rem;
+						flex-wrap: wrap;
+
+						.desc-item {
+							display: flex;
+							align-items: center;
+							text-align: center;
+							border-radius: 0.4rem;
+							padding: 0.7rem 0.8rem;
+							margin-right: 1.2rem;
+							margin-bottom: 0.8rem;
+							background: #F0F0F0;
+
+							&.hide {
+								display: none;
+							}
+
+							&.white {
+								background: #ffffff;
+								border: 1px solid #F0F0F0;
+							}
+
+							svg {
+								use {
+									fill: $mardi-gras;
+								}
+							}
+
+							p {
+								font-size: 1.6rem;
+								padding-left: 0.5rem;
+								margin: 0;
+							}
+						}
+					}
+
+					.card-discounts {
+						position: absolute;
+						top: 0;
+						left: 0.3rem;
+
+						p {
+							margin-left: 0.5rem;
+							margin-bottom: 0;
+						}
+
+						.discounts-item {
+							padding: 0.5rem 0.6rem;
+							margin: 0.5rem 0.5rem;
+							display: flex;
+							align-items: center;
+							background-color: #F1F1F1;
+							border-radius: 0.4rem;
+
+							&.hide {
+								display: none;
+							}
+
+							&.purpul {
+								background: rgba(#24002f, 0.9);
+
+								&.purpul-yelow {
+									color: #FEDF77;
+
+									svg {
+										use {
+											fill: #FEDF77;
+										}
+									}
+								}
+
+								&.purpul-green {
+									color: #99EAC1;
+
+									svg {
+										use {
+											fill: #99EAC1;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.swiper-pagination {
+				display: none;
+				bottom: 2.5rem;
+				right: 45%;
+
+				.swiper-pagination-bullet {
+					margin: 0 1rem;
+				}
+			}
+		}
+	}
+}
+
+@include respond(m-screen) {
+	.cards .card-block .card-wrapper .card .card-info .card-desc .desc-item p {
+		font-size: 1.4rem;
+	}
+}
+
+
+@include respond(es-screen) {
+	.cards {
+		.card-block {
+			.card-wrapper {
+				.swiper-pagination {
+					display: block;
+					bottom: 2.5rem;
+					right: 45%;
+
+					.swiper-pagination-bullet {
+						margin: 0 1rem;
+					}
+				}
+			}
+		}
+	}
+}
