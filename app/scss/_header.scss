@@ -14,7 +14,8 @@ header{
         display: flex;
         align-items: center;
         justify-content: flex-end;        
-    }        
+    }
+       
     &.transparent{
         .menu-block{
             display: flex;
@@ -27,17 +28,15 @@ header{
             align-items: center;      
             li{
                 list-style: none;
-                &:not(:last-child){
-                    margin-right: 2.5rem;
-                }
+                margin-right: 2.5rem;
                 a{
                     color:$white;
+                    &.sell{
+                        color:$white;
+                    }
                 }
             }
-        }
-        .sell{
-            margin:0 2.5rem;
-        }    
+        }   
         .authentication{
             display: flex;
             align-items: center;
@@ -60,25 +59,43 @@ header{
         .menu-block{
             display: flex;
             align-items: center;
+            margin-left: 2rem;
         }
+        .logo{
+            font-size: 1.4rem;
+            color:$mardi-gras;
+            text-decoration: none;
+            margin-right:auto;
+            span{
+                font-size: 3.2rem;
+                span{
+                    color:$violet-eggplant;
+                }
+            }
+        }
+        .search{
+            max-width: 39rem;
+            margin-right: 6rem;
+        }         
         .menu{
             margin: 0;
             padding: 0;  
             display: flex;
-            align-items: center;      
+            align-items: center;
+            flex-shrink: 0;   
             li{
                 list-style: none;
-                &:not(:last-child){
-                    margin-right: 2.5rem;
-                }
+                margin-right: 2.5rem;
                 a{
                     color:$mardi-gras;
+                    display: flex;
+                    flex-shrink: 0;
+                    &.sell{
+                        color:$white;
+                    }
                 }
             }
-        }
-        .sell{
-            margin:0 2.5rem;
-        }    
+        }   
         .authentication{
             display: flex;
             align-items: center;
