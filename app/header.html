@@ -17,55 +17,127 @@
 <body>
 	<!-- Header  -->
 	<header class="header">
-		<nav class="navbar navbar-expand-lg navbar-light">
-			<a class="navbar-brand" href="#">buy&sell like a pro <h3><span>Proper</span>.homes</h3></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<form class="form-inline">
-					<input class="form-control" type="search" placeholder="Type a city name with properties for sale"
-						aria-label="Search">
-					<button class="btn" type="submit"><img src="../images/search-ico.svg"
-							alt="search"></button>
-				</form>
-				<ul class="navbar-nav">
-					<li class="nav-item ">
-						<a class="nav-link" href="#">Properties for sale</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">New projects</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">About us</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Q&A</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Contact</a>
-					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Sell you property</a>
-					</li>
-				</ul>
-				<div class="login">
-					<button><img src="../images/login_user-ico.svg" alt="login_user">Login /
-						Register</button>
+		<div class="header__container">
+			<a href="#" class="header__logo">buy&sell like a pro <h3><span>Proper</span>.homes</h3></a>
+			<div class="header__menu menu">
+				<div class="menu__icon">
+					<span></span>
 				</div>
+				<nav class="menu__body">
+					<form class="form-inline">
+						<input class="form-control" type="search" placeholder="Type a city name with properties for sale"
+							aria-label="Search">
+						<button class="btn" type="submit"><img src="../images/search-ico.svg" alt="search"></button>
+					</form>
+					<a href="#" class="header-mobile__logo">buy&sell like a pro <h3><span>Proper</span>.homes</h3></a>
+					<ul class="menu__list">
+						<li><a data-goto=".page__section_1" href="#" class="menu__link">Properties for sale</a></li>
+						<li><a data-goto=".page__section_2" href="#" class="menu__link">New projects</a></li>
+						<li><a data-goto=".page__section_3" href="#" class="menu__link">About us</a></li>
+						<li><a data-goto=".page__section_3" href="#" class="menu__link">Q&A</a></li>
+						<li><a data-goto=".page__section_3" href="#" class="menu__link">Contact</a></li>
+						<li><a data-goto=".page__section_3" href="#" class="menu__link active">Sell you property</a></li>
+					</ul>
+					<div class="login">
+						<button><img src="../images/login_user-ico.svg" alt="login_user">Login / Register</button>
+						<img class="mobile-user" src="../images/login_user-ico.svg" alt="login_user">
+					</div>
+				</nav>
 			</div>
-			<div class="user">
-				<button><img src="../images/login_user-ico.svg" alt="login_user"></button>
-			</div>
-		</nav>
+		</div>
 	</header>
 
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
 	</script>
 	<script src="js/libs.min.js"></script>
+	<script>
+		"use strict"
+
+		const isMobile = {
+			Android: function () {
+				return navigator.userAgent.match(/Android/i);
+			},
+			BlackBerry: function () {
+				return navigator.userAgent.match(/BlackBerry/i);
+			},
+			iOS: function () {
+				return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+			},
+			Opera: function () {
+				return navigator.userAgent.match(/Opera Mini/i);
+			},
+			Windows: function () {
+				return navigator.userAgent.match(/IEMobile/i);
+			},
+			any: function () {
+				return (
+					isMobile.Android() ||
+					isMobile.BlackBerry() ||
+					isMobile.iOS() ||
+					isMobile.Opera() ||
+					isMobile.Windows());
+			}
+		};
+
+		if (isMobile.any()) {
+			document.body.classList.add('_touch');
+
+			let menuArrows = document.querySelectorAll('.menu__arrow');
+			if (menuArrows.length > 0) {
+				for (let index = 0; index < menuArrows.length; index++) {
+					const menuArrow = menuArrows[index];
+					menuArrow.addEventListener("click", function (e) {
+						menuArrow.parentElement.classList.toggle('_active');
+					});
+				}
+			}
+
+		} else {
+			document.body.classList.add('_pc');
+		}
+
+		// Меню бургер
+		const iconMenu = document.querySelector('.menu__icon');
+		const menuBody = document.querySelector('.menu__body');
+		if (iconMenu) {
+			iconMenu.addEventListener("click", function (e) {
+				document.body.classList.toggle('_lock');
+				iconMenu.classList.toggle('_active');
+				menuBody.classList.toggle('_active');
+			});
+		}
+
+
+		// Прокрутка при клике
+		const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
+		if (menuLinks.length > 0) {
+			menuLinks.forEach(menuLink => {
+				menuLink.addEventListener("click", onMenuLinkClick);
+			});
+
+			function onMenuLinkClick(e) {
+				const menuLink = e.target;
+				if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+					const gotoBlock = document.querySelector(menuLink.dataset.goto);
+					const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header')
+						.offsetHeight;
+
+					if (iconMenu.classList.contains('_active')) {
+						document.body.classList.remove('_lock');
+						iconMenu.classList.remove('_active');
+						menuBody.classList.remove('_active');
+					}
+
+					window.scrollTo({
+						top: gotoBlockValue,
+						behavior: "smooth"
+					});
+					e.preventDefault();
+				}
+			}
+		}
+	</script>
 </body>
 
 </html>
