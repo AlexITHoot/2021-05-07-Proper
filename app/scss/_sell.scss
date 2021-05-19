@@ -627,12 +627,6 @@
 			min-height: 49.5rem;
 			padding-bottom: 6rem;
 
-			.swiper-wrapper {
-				&.stop {
-					transform: translate3d(0px, 0px, 0px) !important;
-				}
-			}
-
 			.card {
 				color: $mardi-gras;
 				position: relative;
@@ -764,27 +758,20 @@
 	}
 }
 
-@include respond(m-screen) {
-	.cards .card-block .card-wrapper .card .card-info .card-desc .desc-item p {
-		font-size: 1.4rem;
+@include respond(xl-screen) {
+	.cards .card-block .card-wrapper .swiper-pagination {
+		display: block;
+		bottom: 2.5rem;
+		right: 45%;
+	}
+
+	.swiper-pagination-bullet {
+		margin: 0 1rem;
 	}
 }
 
-
-@include respond(es-screen) {
-	.cards {
-		.card-block {
-			.card-wrapper {
-				.swiper-pagination {
-					display: block;
-					bottom: 2.5rem;
-					right: 45%;
-
-					.swiper-pagination-bullet {
-						margin: 0 1rem;
-					}
-				}
-			}
-		}
+@include respond(m-screen) {
+	.cards .card-block .card-wrapper .card .card-info .card-desc .desc-item p {
+		font-size: 1.4rem;
 	}
 }
