@@ -1,21 +1,12 @@
 @import './libs';
 @import './mixins';
-@import './fonts';
 @import './typography';
 @import './vars';
-@import './buttons';
-@import './badges';
-@import './select';
-@import './hamburger-menu';
-@import './slider';
-@import './card';
 @import './common';
 @import './winWith';
 @import './sell';
 @import './header';
 @import './footer';
-
-@import './pages/listing';
 
 
 html {
@@ -23,20 +14,17 @@ html {
 	font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.6rem;
-    line-height: 1.2;
-    font-weight: 400;
-    box-sizing: border-box;    
+body {
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.4rem;
+	line-height: 1.2;
+	font-weight: 400;
+	box-sizing: border-box;
 }
 
-.container{
-    max-width: 167rem;
-    margin: 0 auto;
-    width: 100%;
-}
-
-[class*="col-"]{
-    padding: 0 0.8rem;
+.container {
+	max-width: 167rem;
+	margin: 0 auto;
+	width: 100%;
 }
